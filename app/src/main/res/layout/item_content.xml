@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:weightSum="1">
+
+    <com.bilibili.magicasakura.widgets.TintTextView
+        android:id="@+id/item_tx_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adsasdasfas"
+        android:textColor="@color/md_grey_900"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <com.bilibili.magicasakura.widgets.TintImageView
+            android:id="@+id/item_iv_show"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_weight="0.86"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <com.bilibili.magicasakura.widgets.TintProgressBar
+            android:id="@+id/item_load_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+</LinearLayout>

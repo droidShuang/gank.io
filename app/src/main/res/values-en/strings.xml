@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gank.IO</string>
+    <string name="about">about</string>
+    <string name="gank_categary">categary</string>
+    <string name="gank_meizhi">girl</string>
+    <string name="gank_today">today</string>
+</resources>

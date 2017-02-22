@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@mipmap/ic_home"
+        id="@+id/tab_home"
+        title="@string/gank_today" />
+    <tab
+        icon="@mipmap/ic_store"
+        id="@+id/tab_store"
+        title="@string/gank_meizhi" />
+    <tab
+        icon="@mipmap/ic_message"
+        id="@+id/tab_message"
+        title="@string/gank_categary" />
+    <tab
+        icon="@mipmap/ic_set"
+        id="@+id/tab_set"
+        title="@string/about" />
+</tabs>
