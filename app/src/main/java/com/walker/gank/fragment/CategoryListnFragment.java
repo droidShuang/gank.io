@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.orhanobut.logger.Logger;
@@ -32,12 +33,15 @@ import me.drakeet.multitype.MultiTypeAdapter;
  */
 
 public class CategoryListnFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+    @Bind(R.id.gank_viewstub)
+    ViewStub viewStub;
     @Bind(R.id.gank_container)
     EmptyLayout emptyLayout;
     @Bind(R.id.gank_rv)
     XRecyclerView rvGank;
     @Bind(R.id.gank_swipe)
     SwipeRefreshLayout swipeRefreshLayout;
+    @Bind(R.id.gank_viewstub)
     List<Object> items;
     MultiTypeAdapter adapter;
     String type;
@@ -171,12 +175,18 @@ public class CategoryListnFragment extends BaseFragment implements SwipeRefreshL
     @Override
     protected void lazyLoad() {
         super.lazyLoad();
-        if (!getUserVisibleHint() || !isPrepared) {
-            Logger.d("CategoryListFragment 未加载isPrepared:   " + isPrepared + "     isVisible   " + isVisible);
-            return;
-        } else {
-            Logger.d("CategoryListFragment 加载");
+        if (isPrepared) {
+            viewStub.setVisibility(View.VISIBLE);
             getData(count);
+        } else {
+
         }
+//        if (!getUserVisibleHint() || !isPrepared) {
+//            Logger.d("CategoryListFragment 未加载isPrepared:   " + isPrepared + "     isVisible   " + isVisible);
+//            return;
+//        } else {
+//            Logger.d("CategoryListFragment 加载");
+//
+//        }
     }
 }
